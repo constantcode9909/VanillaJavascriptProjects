@@ -1,2 +1,2 @@
 # VanillaJavascriptProjects
-this is my personal work of the freecodecamp youtube tutorial Javascript Projects
+This is my personal work of the freecodecamp youtube tutorial Javascript Projects
