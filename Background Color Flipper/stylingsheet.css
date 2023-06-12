@@ -35,7 +35,7 @@ h1 {
 main {
     width: 100%;
     height: 100vh;
-    background-color: rgba(176, 189, 179, 0.212);
+    background-color:#b0bdb336 ;
     display: grid;
     place-content: center;
 }
@@ -56,7 +56,7 @@ article{
     margin: auto;
     background-color: inherit;
     padding: 1em;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     font-style: italic;
     border-radius: 15px;
