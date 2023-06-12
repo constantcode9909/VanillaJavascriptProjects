@@ -1,4 +1,3 @@
-// get the original value of the background color  of the main element 
 const mainElement = document.querySelector("main");
 const mainElementComputedStyles = getComputedStyle(mainElement);
 const backgroundColorValue = mainElementComputedStyles.backgroundColor;
