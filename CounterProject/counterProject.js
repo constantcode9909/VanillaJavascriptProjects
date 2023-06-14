@@ -25,10 +25,24 @@ function updateTextValue(updatedValue){
 }
 
 
+// a function to update the color value of the counter element according to the new value it holds as innertext
+function valueColorChanger(targetValue){
+    if(targetValue === 0){
+        changeColorValue("rgb(70, 70, 231)");
+    }
+    else  if(targetValue < 0){
+        changeColorValue("red");
+    }
+    else{
+        changeColorValue("green");
+    }
+}
+
+
 btnDecrease.addEventListener("click" , function () {
-    changeColorValue("red");
     let elementCounterTextValue = getTextValue();
     let currentValue = --elementCounterTextValue;
+    valueColorChanger(currentValue);
     updateTextValue(currentValue);
 })
 
@@ -40,8 +54,8 @@ btnReset.addEventListener("click" , function (){
 
 
 btnIncrease.addEventListener("click" , function () {
-    changeColorValue("green");
     let elementCounterTextValue = getTextValue();
     let currentValue = ++elementCounterTextValue;
+    valueColorChanger(currentValue);
     updateTextValue(currentValue);
 })
