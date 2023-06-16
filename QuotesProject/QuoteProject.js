@@ -92,7 +92,5 @@ function eventManager(event){
 }
 
 
-buttonNext.addEventListener("click",  ()=>eventManager(event));
-buttonPrevious.addEventListener("click",  ()=>eventManager(event));
-buttonSurprise.addEventListener("click" , ()=>eventManager(event));
+
 

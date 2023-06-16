@@ -1,0 +1,125 @@
+:root{
+    --colorOne:hsl(210, 36%, 96%);
+    --balckVariant:rgba(0, 0, 0, 0.288);
+    --blueColor:rgb(0, 132, 255);
+    --blueColorVariant:rgb(88, 157, 221);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: var(--colorOne);
+}
+
+nav{
+    width: 100%;
+    padding: 2rem 0.75rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    text-shadow: 2px 3px 2px var(--balckVariant);
+}
+
+ul{
+    list-style-type: none;
+    margin-block: 0;
+    padding-inline: 0;
+    display: flex;
+    gap: 15px;
+}
+
+li{
+    display: grid;
+    place-content: center;
+}
+
+.item:hover{
+   cursor: pointer;
+   color: aqua;
+   transition: color 0.75s 0s ease-in-out;
+}
+
+i{
+    color: var(--blueColor);
+    transform: scale(1.25);
+}
+
+.item_icon:hover{
+    cursor: pointer;
+    color: var(--blueColorVariant);
+}
+
+.menu_icon_container{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes icon_animation {
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes heightAnimation {
+    from{
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    to{
+        height: fit-content;
+        overflow: auto;
+        position: static;
+    }
+}
+
+.heightAnimation{
+    animation: heightAnimation 0.25s ease-out 0s forwards;
+}
+
+.iconAnimation{
+    animation: icon_animation 0.25s ease-out 0s forwards;
+}
+
+@media (max-width:625px) {
+    nav{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        row-gap: 45px;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .menu_icon_container{
+        display: grid;
+        place-content: center;
+        order: 2;
+        justify-self: end;
+    }
+
+    .menu_container{
+        display: flex;
+        gap: 15px;
+        order: 3;
+        flex-direction: column;
+        justify-self: start;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+}
