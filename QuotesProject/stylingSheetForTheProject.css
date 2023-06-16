@@ -46,7 +46,7 @@ img{
     width: 135px;
     height: 135px;
     object-fit: cover;
-    object-position: center -30px;
+    object-position: center ;
 }
 
 figure{
