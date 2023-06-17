@@ -1,7 +1,5 @@
-// get the button elements on which the events will be applied
-const btnDecrease = document.getElementById("btn_decrease");
-const btnReset = document.getElementById("btn_reset");
-const btnIncrease = document.getElementById("btn_increase");
+// get the button elements on which the events will be applied in a NodeList
+const listOfButtons = document.querySelectorAll("button");
 
 // get the counter element with the changed value 
 const counterElement = document.getElementById("counter_value");
@@ -38,24 +36,19 @@ function valueColorChanger(targetValue){
     }
 }
 
-
-btnDecrease.addEventListener("click" , function () {
-    let elementCounterTextValue = getTextValue();
-    let currentValue = --elementCounterTextValue;
-    valueColorChanger(currentValue);
-    updateTextValue(currentValue);
-})
-
-
-btnReset.addEventListener("click" , function (){
-    updateTextValue("0");
-    changeColorValue("rgb(70, 70, 231)");
-})
-
-
-btnIncrease.addEventListener("click" , function () {
-    let elementCounterTextValue = getTextValue();
-    let currentValue = ++elementCounterTextValue;
-    valueColorChanger(currentValue);
-    updateTextValue(currentValue);
+// run the click event on each button and change the value and color according to the class value on buttons
+listOfButtons.forEach(function(btn){
+    btn.addEventListener("click" , (e)=>{
+       const btnClassValue = e.target.className;
+       let elementCounterTextValue = getTextValue();
+       if(btnClassValue === "btn_increase")
+         ++elementCounterTextValue;
+       else if(btnClassValue === "btn_decrease")
+         --elementCounterTextValue;
+       else{
+        elementCounterTextValue = 0;
+       }
+       valueColorChanger(elementCounterTextValue);
+       updateTextValue(elementCounterTextValue);
+    })
 })
