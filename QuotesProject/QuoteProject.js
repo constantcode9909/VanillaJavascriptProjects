@@ -30,10 +30,7 @@ const listOfUsers = {
 
 
 const listOfUsersArrayVersion = Object.entries(listOfUsers);
-
-const buttonPrevious = document.getElementById("btn_previous");
-const buttonNext = document.getElementById("btn_next");
-const buttonSurprise = document.getElementById("btn_surprise_me");
+const buttonsList = document.querySelectorAll("button");
 
 
 // change the src attribute in the image element
@@ -92,5 +89,8 @@ function eventManager(event){
 }
 
 
+buttonsList.forEach((btn)=>{
+    btn.addEventListener('click' , eventManager);
+})
 
 
