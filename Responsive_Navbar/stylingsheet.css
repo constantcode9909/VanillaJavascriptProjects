@@ -36,6 +36,7 @@ ul{
 li{
     display: grid;
     place-content: center;
+    width: 100%;
 }
 
 .item:hover{
@@ -60,6 +61,14 @@ i{
 
 a{
     text-decoration: none;
+}
+
+#target_icon{
+    color: gray;
+}
+
+#target_icon:hover{
+    color: var(--blueColorVariant);
 }
 
 @keyframes icon_animation {
@@ -97,8 +106,8 @@ a{
 @media (max-width:625px) {
     nav{
         display: grid;
-        grid-template-columns: repeat(2 , 1fr);
-        row-gap: 45px;
+        grid-template: repeat(2,auto) / repeat(2 , 1fr) ;
+        row-gap: 30px;
     }
 
     ul{
@@ -113,13 +122,23 @@ a{
     }
 
     .menu_container{
+        width: 100%;
         display: flex;
-        gap: 15px;
+        gap: 0px;
         order: 3;
         flex-direction: column;
-        justify-self: start;
+        grid-column: 1/3;
         height: 0;
         overflow: hidden;
         position: absolute;
+    }
+
+    li{
+        display: inline-block;
+        padding: 10px 5px;
+    }
+
+    .item:hover{
+        background-color: cadetblue;
     }
 }

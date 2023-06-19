@@ -1,11 +1,5 @@
 const dispalyLink = document.querySelector("a");
 
-function dispalyLinkChanger(){
-    const menuIcon = document.getElementById("target_icon");
-    menuIcon.style.color = "gray";
-    dispalyLink.classList.add("iconAnimation");
-}
-
 function displayHeightAnimation(){
     const listMenu = document.getElementById('menu_container');
     listMenu.classList.toggle("heightAnimation");
@@ -13,7 +7,8 @@ function displayHeightAnimation(){
 
 function menuDisplayer(){
     event.preventDefault();
-    dispalyLinkChanger();
+    // dispaly Link Animation
+    dispalyLink.classList.toggle("iconAnimation");
     displayHeightAnimation();
 }
 
