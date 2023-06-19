@@ -96,7 +96,7 @@ a{
 }
 
 .heightAnimation{
-    animation: heightAnimation 0.25s ease-out 0s forwards;
+    animation: heightAnimation 0.75s cubic-bezier(0, 0, 0, 1.04) 0s forwards;
 }
 
 .iconAnimation{
