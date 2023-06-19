@@ -53,17 +53,17 @@ li{
     cursor: pointer;
 }
 
-#History{
+.item_one{
     padding: 25px 15px 15px 25px;
     background-color: white;
     border-radius: 20px 0 0 0 ;
 }
 
-#Vision{
+.item_two{
     padding: 25px 15px 15px 15px;
 }
 
-#Goals{
+.item_three{
     padding: 25px 25px 15px 15px;
     border-radius: 0 20px 0 0;
 }
@@ -83,6 +83,15 @@ article{
 
 p{
     padding: 5px 10px 10px 10px;
+}
+
+/* classes to add to elements to solve the hover effect background color problem */
+.active{
+    background-color: white;
+}
+
+.inactive{
+    background-color: gray;
 }
 
 @media (max-width:820px) {

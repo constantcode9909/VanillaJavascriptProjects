@@ -32,12 +32,13 @@ function hoverEffectModifier(element){
         const target = document.getElementById(e);
         if(e === element){
             target.classList.remove("hover_effect");
-            target.style.backgroundColor = "white";
+            target.classList.add("active")
+            target.classList.remove("inactive");
         }
         else 
            {
             target.classList.add("hover_effect");
-            target.style.backgroundColor = "gray";
+            target.classList.add("inactive");
            }
     })    
 }
@@ -47,7 +48,6 @@ listItems.forEach((element => {
     element.addEventListener("click" , function(e){
         const idValue = e.target.id;
         const elementIndex = listOfIDs.indexOf(idValue);
-        element.style.backgroundColor = "white";
         hoverEffectModifier(idValue);
         changeDisplay.call(contentObjectList[elementIndex][1]);
     })
