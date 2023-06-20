@@ -11,65 +11,71 @@
 }
 
 body{
-    width: 100%;
-    margin: 0;
-    height: 100vh;
+    width: 60%;
+    margin: auto;
+    height: 80vh;
     display: grid;
     place-content: center;
     background-color: var(--colorOne);
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 
 header{
-    width: 100%;
     font-family: var(--googleFontFamily1);
     color: var(--mainColor);
     text-align: center;
     font-size: 1.5rem;
 }
 
-p{
+section{
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
     background-color: white;
-    padding: 25px;
+    padding: 25px 25px 0 25px;
     border-radius: 20px;
     box-shadow: 2px 1px 2px var(--balckVariant);
     font-family: var(--googleFontFamily2);
     font-weight: bolder;
     font-size: larger;
-    display: flex;
-    justify-content: space-between;
-    gap: 130px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 20px;
 }
 
 .sign_container{
     display: inline-block;
     border: solid 2px var(--mainColor);
-    width: auto;
+    width: fit-content;
     height: fit-content;
     color: var(--mainColor);
     text-decoration: none;
     font-weight: 900;
+    justify-self: self-end;
+    align-self: center;
 }
 
-@media (max-width:343px) {
-    p{
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sign_container{
-        align-self: flex-start;
-    }
+.sign_container:hover{
+    transform: rotate(90deg);
+    width: 20px;
 }
 
-@media (max-width:193px){
-    p{
-        padding: 5px;
-        font-size: smaller;
-    }
+.response_container{
+    font-weight: normal;
+    height: 0;
+    overflow: hidden;
+    grid-column: 1/3;
+}
 
-    .sign_container{
-        align-self: center;
+.reveal{
+    height: auto;
+    overflow: visible;
+    padding-bottom: 25px;
+}
+
+@media (max-width:900px) {
+    body{
+        height: auto;
     }
 }
 
