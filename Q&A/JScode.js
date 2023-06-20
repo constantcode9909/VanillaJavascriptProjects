@@ -1,6 +1,5 @@
 "use strict";
 const links = document.querySelectorAll("a");
-console.dir(links[0].nextElementSibling);
 
 function signModifier(element){
      if (element.innerText === "+"){
