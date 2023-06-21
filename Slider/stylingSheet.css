@@ -1,0 +1,80 @@
+:root{
+    --background-color-value-extracted:hsl(210, 36%, 96%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--background-color-value-extracted);
+}
+
+.container{
+    width: 80%;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    border: solid 3px rgb(22, 85, 201);
+    background-image: url("ananas on a beach.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    position: relative;
+}
+
+img{
+    position: absolute;
+    top: 25%;
+    border-radius: 50%;
+    display: none;
+}
+
+.img_reveal{
+    display: inline-block;
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: bolder;
+}
+
+
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+}
+   
+button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+   
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.btn_prev{
+    display: none;
+}
