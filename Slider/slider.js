@@ -13,7 +13,7 @@ function modifier(index){
             sectionElement.style.backgroundImage = imgURL2;
         }else{
             sectionElement.style.backgroundImage = "none";
-            sectionElement.style.backgroundColor = "blue";
+            sectionElement.style.backgroundColor = "rgb(238, 84, 110)";
         }
 }
 
@@ -26,7 +26,6 @@ function textUpdate(value){
 function revealButton(value , e){
     if(value === 4){
         e.style.display = "none";
-        // img.style.display = "inline-block";
         img.classList.toggle("img_reveal");
     }else if(value === 1){
         e.style.display = "none";

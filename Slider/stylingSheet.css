@@ -20,7 +20,7 @@ body{
     height: 70vh;
     display: grid;
     place-items: center;
-    border: solid 3px rgb(22, 85, 201);
+    border: solid 7px rgb(22, 85, 201);
     background-image: url("ananas on a beach.jpg");
     background-position: center;
     background-size: cover;
