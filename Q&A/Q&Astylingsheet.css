@@ -48,6 +48,7 @@ section{
     border: solid 2px var(--mainColor);
     width: fit-content;
     height: fit-content;
+    margin-right: 20px;
     color: var(--mainColor);
     text-decoration: none;
     font-weight: 900;
