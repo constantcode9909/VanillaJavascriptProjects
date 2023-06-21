@@ -1,3 +1,4 @@
+"use strict";
 const sectionElement = document.querySelector(".container");
 const btnList = document.querySelectorAll("button");
 const imgURL = "url(sea.jpeg)"
