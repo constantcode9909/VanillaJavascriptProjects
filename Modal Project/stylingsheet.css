@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    background-image: url("mailchimp-Hv9CS6KZayQ-unsplash.jpg");
+    background: url("mailchimp-Hv9CS6KZayQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -43,6 +43,13 @@ h1 {
     background-color: var(--colorOne);
 }
 
+.open:hover {
+      cursor: alias;
+      background-color: white;
+      color: var(--colorOne);
+      transition: all 100ms ease-in;
+}
+
 .close {
     display: none;
     position: absolute;
@@ -56,8 +63,9 @@ h1 {
     transition: all 0.25s ease;
 }
   
-  .close:hover{
+  .close:hover {
     transform: scale(1.5);
+    cursor: pointer;
   }
 
 p {
