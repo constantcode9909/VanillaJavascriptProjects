@@ -3,7 +3,7 @@
     --colorOne:rgba(13, 13, 95, 0.938);
 }
 
-* {
+* , *::after , *::before {
     box-sizing: border-box;
 }
 
@@ -15,7 +15,6 @@ body {
 }
 
 section {
-    width: 100%;
     padding: 5rem 2.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,16 +22,16 @@ section {
 }
 
 figure {
-    width: 100%;
     margin: 0;
 }
 
 img{
     max-width: 100%;
+    border: solid palevioletred 15px;
+    border-radius: 20px;
 }
 
 article {
-    width: 100%;
     padding: 25px 20px;
     letter-spacing: 4px;
 }
@@ -53,18 +52,18 @@ p {
 
 div {
     display: flex;
+    justify-content: space-between;
 }
 
 .number {
-    display: inline-block;
+    flex-basis: 100%;
     margin-right: 16.5px;
     text-align: center;
     padding: 15px;
-    border-radius: 7px;
+    border-radius: 10px;
     background-color: var(--colorOne);
     color: white;
-    font-size: 1.5rem;
-    font-weight: bolde;
+    font-size:1.45rem ;
 }
 
 @media (max-width:990px) {
