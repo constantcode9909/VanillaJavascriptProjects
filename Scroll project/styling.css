@@ -4,6 +4,7 @@
     --FontOne:'Titillium Web', sans-serif;
     --clr-grey-10: hsl(210, 36%, 96%);
     --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-secondary: hsla(182, 63%, 54%);
 }
 
 * , *::after , *::before {
@@ -32,12 +33,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2.3rem 1rem;
+    padding: 1.45rem 1rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
 }
 
 header > * {
     flex-basis: 50%;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
 }
 
 
@@ -45,9 +49,24 @@ i {
    font-size: 1.5rem;
 }
 
-.menu_icon {
+.reveal_container {
     text-align: right;
+}
+
+.menu_icon {
     color: var(--clr-blue);
+}
+
+nav {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.reveal_menu{
+    height: 236px;
+    overflow: visible;
+    padding: 10px;
 }
 
 ul {
@@ -72,7 +91,7 @@ li {
 /* ---------- First Section --------------- */
 
 .explore_section{
-    min-height: 100vh;
+    min-height: 85vh;
     display: grid;
     place-items: center;
     background: linear-gradient(to bottom, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0.4)), url("hero-bcg.jpeg");
@@ -86,15 +105,23 @@ li {
 }
 
 .article1 h1{
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 6px;
     margin-block-start: 1rem;
     margin-block-end: 0;
+}
+
+.article_content {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-inline: 20px;
 }
 
 .explore_link{
     color: white;
     font-size: 1.25rem;
-    display: inline-block;
+    font-weight: bold;
     border: solid 3.5px white;
     padding: 10px 25px;
 }
@@ -105,10 +132,15 @@ li {
     transition: all 0.5s ease;
 }
 
+/* ----------------------- other sections ----------------------- */
+
 section:not(.explore_section){
-    min-height: 75vh;
+    min-height: 85vh;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-top: 3rem;
 }
 
 .about_us_section , .tours_section {
@@ -116,10 +148,16 @@ section:not(.explore_section){
 }
 
 .header-content {
-    margin-block-start: 0;
+    margin-block: 0;
 }
 
-footer{
+span {
+    color:var(--clr-secondary);
+}
+
+/* -------------------- footer -------------------------------- */
+
+footer {
     display: grid;
     place-items: center;
     min-height: 30vh;
@@ -127,4 +165,48 @@ footer{
     color: white;
     font-size: 1.25rem;
     background-color: var(--clr-grey-1);
+}
+
+
+/* -----------------------------  Responsive adjustements ------------------- */
+
+@media (min-width:980px) {
+
+    .reveal_container {
+        display: none;
+    }
+
+    nav {
+        height: auto;
+        overflow: visible;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    header * {
+        flex-basis: auto;
+    }
+
+    .article1 h1 {
+        font-size: 5rem;
+    }
+
+    .article_content {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 2.8px;
+    }
+}
+
+@media (max-width:220px) {
+
+    .article1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .article_content {
+        font-size: 1.1rem
+    }
 }
