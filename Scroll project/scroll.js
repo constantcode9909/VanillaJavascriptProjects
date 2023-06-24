@@ -1,3 +1,4 @@
+"use strict";
 const revealLinks = document.querySelectorAll(".reveal_link");
 const headerSection = document.querySelector("nav");
 
