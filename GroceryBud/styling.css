@@ -5,6 +5,9 @@
     --box-shadow-value:1px 1px 4px rgba(0, 0, 0, 0.5);
     --color-one:rgb(26, 177, 247);
     --color-two:rgb(15, 124, 175);
+    --color-three:rgb(223, 85, 85);
+    --color-four:rgb(145, 29, 29);
+    --color-five:rgba(94, 90, 90, 0.938);
 }
 
 * , *::before , *::after {
@@ -19,8 +22,11 @@ body {
     place-items: center;
 }
 
+p {
+    margin-block: 0;
+}
+
 .form_container {
-    width: 50%;
     padding: 3rem 3rem;
     border-radius: 12px;
     box-shadow: var(--box-shadow-value);
@@ -28,8 +34,14 @@ body {
     text-align: center;
 }
 
-p {
-    margin-block: 0;
+.warning_text {
+    font-weight: lighter;
+    width: 100%;
+    display: none;
+}
+
+.reveal {
+    display: inline-block !important;
 }
 
 h1 {
@@ -47,18 +59,80 @@ form > * {
     border: none;
     padding: 4px 10px;
     font-size: 1.25rem;
+    display: inline-block;
 }
 
 input {
     background-color: var(--color-gray);
     border-radius: 5px 0 0 5px;
+    color: var(--color-five);
 }
 
-button {
+#submit {
     border-radius: 0 5px 5px 0;
     background-color: var(--color-one);
 }
 
-button:hover {
+#submit:hover {
     background-color:var(--color-two) ;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+.item:hover {
+    background-color: var(--clr-grey-10);
+}
+
+.user_content {
+    letter-spacing: 2px;
+    font-size: large;
+    text-align: left;
+    width: 100%;
+}
+
+.user_content:hover {
+    color: var(--color-two);
+}
+
+.link_container {
+    display: flex;
+    gap: 17px;
+}
+
+a {
+    display: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.edit_link {
+    color: #37db37;
+}
+
+.delete_link {
+    color: rgb(216, 98, 98);
+}
+
+.clear_btn {
+    margin-block-start: 1.25rem;
+    border: 0;
+    background-color: inherit;
+    letter-spacing: 2.2px;
+    color: var(--color-three);
+    display: none;
+}
+
+.clear_btn:hover {
+    cursor: pointer;
+    color: var(--color-four);
 }

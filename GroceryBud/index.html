@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5f397a22fb.js" crossorigin="anonymous"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="styling.css">
     <title>Grocery Bud</title>
@@ -12,9 +14,12 @@
         <p class="warning_text"></p>
         <h1>Grocery Bud</h1>
         <form class="input_field" method="post" autocomplete="on">
-            <input type="text" name="" id="" placeholder="e.g.eggs">
-            <button type="submit">Submit</button>
+            <input  type="text" name="text_holder" id="info_text" placeholder="e.g.eggs">
+            <button type="submit" id="submit">Submit</button>
         </form>
+        <div class="input_container">
+        </div>
+        <button class="clear_btn">Clear Items</button>
     </div>
     <!-- Javascript -->
     <script src="grocery.js"></script>
