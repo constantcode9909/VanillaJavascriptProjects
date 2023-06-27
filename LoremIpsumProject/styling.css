@@ -1,0 +1,68 @@
+:root {
+    --google-font-family: 'Agdasima', sans-serif;
+    --google-font-family-two:'Nunito Sans', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    text-align: center;
+    padding-inline: 15rem;
+    margin-top: 4rem;
+}
+
+/* ------- user input section ------- */
+
+.user_input_interface > * {
+    font-family: var(--google-font-family);
+}
+
+h1 {
+    margin-block: 0 2.5rem;
+    font-size: 3rem;
+}
+
+.user_input_container {
+    letter-spacing: 2.5px;
+    font-size: x-large;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+input {
+    width: 4rem;
+    font-size: large;
+    padding-left: 10px;
+}
+
+.btn_generator {
+    font-family: var(--google-font-family);
+    letter-spacing: 2px;
+    font-size: large;
+    text-transform: uppercase;
+    background-color: initial;
+}
+
+.btn_generator:hover {
+    color: white;
+    background-color: black;
+}
+
+/* -------- content section ------------- */
+.content_container {
+    font-size: larger;
+    font-weight: bold;
+    font-family: var(--google-font-family-two);
+}
+
+.hide {
+    display: none
+}
