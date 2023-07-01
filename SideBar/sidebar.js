@@ -5,7 +5,7 @@ const openBtn = document.querySelector(".open-sidebar");
 const sideBarElement = document.querySelector(".sidebar-container");
 
 function performAction(){
-    sideBarElement.classList.toggle("hide");
+    sideBarElement.classList.toggle("show");
 }
 
 openBtn.addEventListener("click",()=>{

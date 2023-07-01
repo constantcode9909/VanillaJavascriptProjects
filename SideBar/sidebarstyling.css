@@ -37,17 +37,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: width 0.2s ease-in-out;
+    transition: all 0.45s ease-in-out;
+    transform: translate(-100%);
 }
 
-.hide {
-    width: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.hide > * {
-    display: none;
+.show {
+   transform: translate(0);
 }
 
 .logo-container {
@@ -123,10 +118,4 @@ button:hover {
 
 .open-sidebar:active {
     background-color: beige;
-}
-
-@media (max-width:350px) {
-    .sidebar-container {
-        padding: 0;
-    }
 }
