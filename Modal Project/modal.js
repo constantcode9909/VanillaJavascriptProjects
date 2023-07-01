@@ -1,10 +1,11 @@
 "use strict";
+
 const section = document.querySelector("section");
 const btnList =document.querySelectorAll("button");
 const presentElements = document.querySelectorAll(".target");
 const hiddenElements = document.querySelectorAll(".target2");
 const backgroundColorValue = "linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)),url(\"mailchimp-Hv9CS6KZayQ-unsplash.jpg\")";
-const imgURL = "(\"mailchimp-Hv9CS6KZayQ-unsplash.jpg\")";
+const imgURL = "url(\"mailchimp-Hv9CS6KZayQ-unsplash.jpg\")";
 const bodyElement = document.querySelector("body");
 
 
@@ -39,6 +40,7 @@ function layoutChanges(a){
       keepDefault();
     }
 }
+
 
 btnList.forEach((e)=>{
     e.addEventListener("click" , function (){
