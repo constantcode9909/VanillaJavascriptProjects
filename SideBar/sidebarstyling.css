@@ -1,0 +1,132 @@
+:root {
+    --color-one:rgba(121, 116, 116, 0.822);
+    --color-two:#9AC5F4;
+    --color-three:rgba(99, 97, 97, 0.212);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-two);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.sidebar-container {
+    width: 354px;
+    padding: 2rem;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.2s ease-in-out;
+}
+
+.hide {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hide > * {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 3rem;
+}
+
+.close-sidebar {
+    display: inline-block;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    transition: transform 0.52s ease-in-out;
+}
+
+.close-sidebar:active {
+    background-color: var(--color-three);
+}
+
+.close-sidebar:hover {
+    transform: scale(1.25);
+}
+
+
+.menu-container {
+    list-style-type: none;
+    margin-block: 0;
+    padding-inline: 0;
+}
+
+.item {
+    padding: 15px 7px;
+}
+
+.item:hover {
+    background-color: rgb(70, 70, 199);
+}
+
+.menu-link {
+    font-size: 1.45rem;
+    color: var(--color-one);
+    display: inline-block;
+    transition: all 0.58s ease;
+}
+
+.menu-link:hover {
+    color: white;
+    transform: translateX(10px);
+}
+
+.icon-container {
+    font-size: 1.5rem;
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.open-sidebar {
+    font-size: 1.6rem;
+    margin: 30px 30px 0 0;
+    animation: openAnimation 1s ease-in-out 0s infinite alternate ;
+}
+
+@keyframes openAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+.open-sidebar:active {
+    background-color: beige;
+}
+
+@media (max-width:350px) {
+    .sidebar-container {
+        padding: 0;
+    }
+}
