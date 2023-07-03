@@ -8,14 +8,24 @@
     <title>Video Project</title>
 </head>
 <body>
-    <video autoplay>
-        <source src="production_id_5040711 (1080p).mp4" type="video/mp4">
-    </video>
-    <div class="background-container"></div>
-    <p>Video Project</p>
-    <div class="btn-container">
-        <button class="play">Play</button>
-        <button class="Pause">Pause</button>
+    <header>
+        <img src="preloader.gif" alt="preloader">
+    </header>
+
+    <main>
+        <video autoplay loop>
+            <source src="production_id_5040711 (1080p).mp4" type="video/mp4">
+        </video>
+
+        <div class="background-container"></div>
+        <p>Video Project</p>
+        
+        <div class="btn-container">
+            <button class="play">Play</button>
+            <button class="Pause">Pause</button>
+            <div class="cover-box"></div>
+        </div>
+    </main>
     </div>
     <!-- Javascript -->
     <script src="video.js"></script>
