@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+:root{
+    --background-color-value-extracted:hsl(210, 36%, 96%);
+    --font-family-one: 'Belanosima', sans-serif;
+    --font-family-two: 'Merriweather', serif;
+    --color-one:rgb(21, 182, 174);
+    --color-two:rgb(207, 58, 207);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color-value-extracted);
+}
+
+main {
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: white;
+    padding-bottom: 1rem;
+    border-bottom: solid 3px ;
+    padding-left: 22px;
+}
+
+main > section:first-child {
+    border-bottom-color: orangered;
+}
+
+main > section:nth-child(2) {
+    border-bottom-color: var(--color-one);
+}
+
+main > section:last-child {
+    border-bottom-color: var(--color-two);
+}
+
+p {
+    margin-block-end: 0;
+    margin-inline: 0;
+}
+
+span {
+    font-size: 2rem;
+}
+
+.counter {
+    font-family: var(--font-family-two);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.text-description {
+    font-family: var(--font-family-one);
+    font-size: 1.7rem;
+}
+
+@media (min-width:630px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 1.5rem;
+    }
+
+    section {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width:910px) {
+    main {
+       padding-top: 5.5rem;
+    }
+
+    section {
+        width: calc((100% / 3) - 20px);
+    }
+
+    p {
+        margin-block-start: 0.65em;
+    }
+}
