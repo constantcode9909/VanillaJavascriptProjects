@@ -1,0 +1,61 @@
+:root {
+    --color-one:#EF6262;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    width:100%;
+}
+
+main > * {
+    display: flex;
+}
+
+.timer-container {
+    width: fit-content;
+    font-size: 5.85rem;
+    font-weight: bolder;
+    margin: 0 auto 2rem auto;
+    color: var(--color-one);
+}
+
+.controls-container {
+    justify-content: center;
+    gap: 40px;
+}
+
+button {
+    border: none;
+    font-size: 2rem;
+    padding: 15px 25px;
+    border-radius: 9px;
+    background-color: var(--color-one);
+    font-weight: bolder;
+    color: white;
+}
+
+.button-active:active  {
+    color: black;
+}
+
+.button-hover:hover  {
+    transform: scale(1.15);
+}
+
+.disabled {
+   opacity: 0.5;
+}
+
+.hidden {
+    display: none;
+}
