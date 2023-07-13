@@ -35,9 +35,10 @@ p {
 }
 
 .warning_text {
-    font-weight: lighter;
+    font-weight: bold;
     width: 100%;
     display: none;
+    padding: 5px 0;
 }
 
 .reveal {

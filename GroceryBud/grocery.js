@@ -70,14 +70,14 @@ function adjustLinks() {
 	toggleRevealClass(deleteLinks, 1);
 }
 
-// a function to display a message to the user on top og the list based on an actio he performed
+// a function to display a message to the user on top of the list based on an action he performed
 function banner(message, colorValue) {
 	warning.innerText = message;
-	warning.style.color = colorValue;
+	warning.style.backgroundColor = colorValue;
 	toggleRevealClass(warning, 1);
 	setTimeout(() => {
-		warning.classList.toggle("reveal");
-	}, 2000);
+		toggleRevealClass(warning, 2);
+	}, 1400);
 }
 
 // delete all the items in the list and hide the clear items button
@@ -112,12 +112,12 @@ function editOption() {
 			const contentHolder = e.parentElement.previousElementSibling;
 			submitBtn.innerText = "EDIT";
 			inputData.value = contentHolder.innerText;
-			function test() {
+			function test() {  
 				contentHolder.innerText = inputData.value;
-				submitBtn.innerText = "Submit";
 				inputData.value = "";
+				submitBtn.innerText = "Submit";
 				garbageCollector();
-				banner("Value Changed", "rgb(99, 223, 126)");
+				banner("Item Value Changed", "rgb(99, 223, 126)");
 				submitBtn.removeEventListener("click", test);
 				toggleRevealClass(e, 1);
 			}
@@ -141,25 +141,49 @@ function displayItem(value) {
 	adjustLinks();
 	inputData.value = "";
 	toggleRevealClass(clearBtn, 1);
-	setInterval(checkListContent, 1000);
+	setInterval(checkListContent, 500);
 	deleteOption();
 	editOption();
 }
 
+function itemExistence(newItemValue){
+	const listOfData = document.querySelectorAll(".user_content");
+    let result = false;
+	listOfData.forEach((dataSet)=>{
+		if(dataSet.innerText === newItemValue){
+			result = true;
+		}
+	})
+	return result;
+}
+
+
+function setLocalStorage(item){
+	let itemNumber = localStorage.length; 
+	++itemNumber;
+    localStorage.setItem(itemNumber.toString(), item);
+}
+
+
 function eventManager() {
 	defaultBehavior();
 	const data = inputData.value;
-
-	if (data.length === 0) {
+	if (data === "") {
 		banner("please add an item", "rgb(223, 176, 176)");
-	} else {
-		const modifiedData = captalise(data);
-		banner("item added successfully", "rgb(99, 223, 126)");
-		displayItem(modifiedData);
+		return
 	}
+	const modifiedData = captalise(data); 
+	if(itemExistence(modifiedData)){
+		inputData.value = "";
+		banner("item already in the list", "rgb(223, 176, 176)");
+		return 
+	}
+	banner("item added successfully", "rgb(99, 223, 126)");
+	displayItem(modifiedData);
+	setLocalStorage(modifiedData);
 }
 
-//  a function to delete the empty elements that may be creted when triggering the edit click event on the submit button
+//  a function to delete the empty elements that may be created when triggering the edit click event on the submit button
 function garbageCollector() {
 	const itemList = document.querySelectorAll(".item");
 	for (let index = 0; index < itemList.length; index++) {
